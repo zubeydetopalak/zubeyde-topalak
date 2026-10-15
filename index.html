@@ -1,1 +1,274 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zübeyde Topalak | Yazılım Geliştirici</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-hover: #0284c7;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 2rem 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .hero {
+            padding: 5rem 10%;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero span {
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #0f172a;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            color: #fff;
+        }
+
+        section {
+            padding: 4rem 10%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 0.5rem auto 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            font-weight: 600;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--accent-color);
+        }
+
+        .project-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-content {
+            text-align: center;
+            color: var(--text-muted);
+        }
+
+        .contact-links {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #334155;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">ZT</div>
+        <nav>
+            <a href="#about">Hakkımda</a>
+            <a href="#skills">Yetenekler</a>
+            <a href="#projects">Projeler</a>
+            <a href="#contact">İletişim</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="about">
+        <h1>Merhaba, Ben <span>Zübeyde Topalak</span></h1>
+        <p>Yazılım Geliştirici | Web teknolojileri, modern arayüzler ve ölçeklenebilir yazılım çözümleri üzerinde çalışıyorum.</p>
+        <a href="#contact" class="btn">İletişime Geç</a>
+    </section>
+
+    <section id="skills">
+        <h2>Yetenekler</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML5 & CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">React</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">Node.js</div>
+            <div class="skill-card">Git & GitHub</div>
+            <div class="skill-card">SQL</div>
+            <div class="skill-card">REST API</div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projeler</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Kişisel Portfolyo Sitesi</h3>
+                <p>GitHub Pages üzerinde barındırılan, modern ve duyarlı tasarıma sahip tanıtım web sitesi.</p>
+                <div class="project-links">
+                    <a href="#">İncele &rarr;</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Web Uygulaması Arayüzü</h3>
+                <p>Kullanıcı deneyimi odaklı, dinamik veri yönetimi sunan frontend projesi.</p>
+                <div class="project-links">
+                    <a href="#">İncele &rarr;</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>API ve Görev Yöneticisi</h3>
+                <p>Veri takibi ve süreç yönetimini kolaylaştıran yazılım çözümü.</p>
+                <div class="project-links">
+                    <a href="#">İncele &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>İletişim</h2>
+        <div class="contact-content">
+            <p>Proje fikirleri, iş birlikleri veya sorularınız için aşağıdaki bağlantılardan bana ulaşabilirsiniz.</p>
+            <div class="contact-links">
+                <a href="mailto:ornek@email.com">E-posta Gönder</a>
+                <a href="https://github.com" target="_blank">GitHub</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Zübeyde Topalak. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
